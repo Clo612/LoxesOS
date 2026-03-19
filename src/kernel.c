@@ -28,3 +28,14 @@ void kprint(const char* str) {
         str++;
     }
 }
+
+#include "kernel.h"
+#include "scheduler.c"
+#include "keyboard.c"
+#include "shell.c"
+
+void kmain() {
+    kprint("Booting BC-OS Phase 2...\n");
+
+    shell(); // now interactive
+}
